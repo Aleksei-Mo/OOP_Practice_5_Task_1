@@ -36,25 +36,31 @@ public class MathModel {
         return first - second;
     }
 
-   /* public static void main(String[] args) {
-        MathModel sumModel = new MathModel();
-
-        sumModel.setFirst(1);
-        sumModel.setSecond(1);
-        if (sumModel.getSum() != 2) {
+   public static void main(String[] args) {
+        MathModel Model = new MathModel();
+        
+        Model.setFirst(1);
+        Model.setSecond(1);
+        if (Model.getSum() != 2) {
             throw new AssertionError("Incorrect test result");
         }
 
-        sumModel.setFirst(1);
-        sumModel.setSecond(2);
-        if (sumModel.getSum() != 3) {
+        Model.setFirst(10);
+        Model.setSecond(5);
+        if (Model.getDivide() != 2) {
+            throw new AssertionError("Incorrect test result");
+        }
+       
+        Model.setFirst(15);
+        Model.setSecond(13);
+        if (Model.getSub() != 2) {
             throw new AssertionError("Incorrect test result");
         }
 
-        sumModel.setFirst(2);
-        sumModel.setSecond(3);
-        if (sumModel.getSum() != 5) {
+        Model.setFirst(3);
+        Model.setSecond(3);
+        if (Model.getMultiply() != 9) {
             throw new AssertionError("Incorrect test result");
         }
-    }*/
+    }
 }

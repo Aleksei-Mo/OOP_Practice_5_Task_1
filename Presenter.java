@@ -31,17 +31,23 @@ public class Presenter {
         }
     }
 
-   /* private static class MockView implements View {
+   private static class MockView implements View {
 
         private int count = 0;
 
         @Override
-        public int getValue(String message) {
+        public int getValueInt(String message) {
             count++;
             return 1;
         }
 
-       /* @Override
+        @Override
+        public String getValueStr(String message) {
+            count++;
+            return "1";
+        }
+
+       @Override
         public void print(String message) {
             if (!message.equals("Sum is 2")) {
                 throw new AssertionError("Incorrect sum");
@@ -54,13 +60,13 @@ public class Presenter {
     }
 
     public static void main(String[] args) {
-        SumModel sumModel = new SumModel();
+        MathModel Model = new MathModel();
         MockView mockView = new MockView();
-        Presenter presenter = new Presenter(sumModel, mockView);
+        Presenter presenter = new Presenter(Model, mockView);
 
         presenter.execute();
         if (mockView.getCount() != 2) {
             throw new AssertionError("Incorrect call of getValue()");
         }
-    }*/
+    }
 }
